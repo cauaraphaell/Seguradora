@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Seguro - Carro Forte</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2 class="titulo">Calculadora de Seguro</h2>
+    <form id="formSeguro" class="forms">
+      <label>Nome do Segurado:
+        <input type="text" id="nome" required class="input">
+      </label>
+
+      <label>Idade:
+        <input type="number" id="idade" required class="input">
+      </label>
+
+      <label>Estado Civil:
+        <select id="estadoCivil" class="select">
+          <option value="solteiro">Solteiro</option>
+          <option value="casado">Casado</option>
+        </select>
+      </label>
+
+      <label>Número de Motoristas Adicionais:
+        <input type="number" id="motoristasAdicionais" value="0" min="0" required class="input">
+      </label>
+
+      <label>Nome do Veículo:
+        <input type="text" id="veiculo" required class="input">
+      </label>
+
+      <label>Classe do Veículo: 
+        <select id="classeVeiculo" class="select">
+          <option value="A">Classe A</option>
+          <option value="B">Classe B</option>
+          <option value="C">Classe C</option>
+        </select>
+      </label>
+
+      <button type="button" onclick="calcularSeguro()" class="botao">Calcular Seguro</button>
+    </form>
+
+    <h3 class="resultadotitulo">Resultado:</h3>
+    <p id="resultado" class="resultado"></p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
